@@ -1,3 +1,5 @@
+language: generic
+
 name: Build
 on: push
 
