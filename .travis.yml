@@ -1,4 +1,5 @@
 language: python
+install: skip
 
 name: Build
 on: push
@@ -26,4 +27,3 @@ jobs:
         export POETRY_SPOTIPY_CLIENT_SECRET=${{ secrets.POETRY_SPOTIPY_CLIENT_SECRET }}
         poetry run pytest
    
-   install: skip
