@@ -54,9 +54,9 @@ def get_art_with_code(uri: str, sp: spotipy.Spotify) -> Image:
     with io.BytesIO() as file_object:
         cover_image.save(file_object, "PNG")
         cf = ColorThief(file_object)
-        dominant_color_rgb = cf.get_color(quality=1)
+        #dominant_color_rgb = cf.get_color(quality=1)
 
-    dominant_color_hex = _rgb_to_hex(dominant_color_rgb)
+    #dominant_color_hex = _rgb_to_hex(dominant_color_rgb)
     #code_color = (
         #"black"
         #if (dominant_color_rgb[0] + dominant_color_rgb[1] + dominant_color_rgb[2])
@@ -69,7 +69,7 @@ def get_art_with_code(uri: str, sp: spotipy.Spotify) -> Image:
     # get spotify code
     url = (
         "https://www.spotifycodes.com/downloadCode.php?uri=png%2F"
-        + f"{dominant_color_hex}%2F{cover_size}%2F{uri_call}"
+        + f"{cover_size}%2F{uri_call}"
     )
     album_code = Image.open(urlopen(url))
     music = Image.open("spotifyartcode/cli/image.png")
