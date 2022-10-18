@@ -1,5 +1,4 @@
 language: python
-install: skip
 
 name: Build
 on: push
