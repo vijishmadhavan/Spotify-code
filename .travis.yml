@@ -15,6 +15,8 @@ jobs:
       with:
         python-version: "3.10"
         cache: poetry
+    - pip:
+    - -r requirements.txt
     - run: |
         poetry env use python3.10
         poetry install
